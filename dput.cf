@@ -1,4 +1,4 @@
 [cpan2deb]
 method          = local
-incoming        = /repo/cpan2deb-lucid/mini-dinstall
-run_dinstall    = 1
+incoming        = /repo/cpan2deb-lucid/mini-dinstall/incoming
+run_dinstall    = 0
