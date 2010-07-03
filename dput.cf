@@ -2,3 +2,4 @@
 method          = local
 incoming        = /repo/cpan2deb-lucid/mini-dinstall
 run_dinstall    = 1
+allow_unsigned_uploads = 1
