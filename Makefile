@@ -13,3 +13,6 @@ create_repo:
 update_mirror:
 	mkdir -p  $(CPAN_MIRROR)
 	perl update_mirror.pl $(CPAN_MIRROR)
+
+depgraph:
+	perl -MCPAN::Dependency -e 'my $$cpandep = new CPAN::Dependency verbose => 1, process => ALL_CPAN; $$cpandep->run; $$cpandep->save_deps_graph(file => "deps.yml")'
