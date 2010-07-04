@@ -1,1 +1,3 @@
 repo_root: /opt/repo
+temp_dir:  /ram/builder/
+image_dir: /opt/images/

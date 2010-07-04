@@ -7,10 +7,15 @@ use File::Copy;
 use File::Basename;
 use FindBin;
 
+use YAML qw/LoadFile/;
+
+my $conf = LoadFile("$FindBin::Bin/conf.yaml");
+
 use constant {
-    TEMPDIR => '/ram/builder/',
-    IMAGEDIR => '/opt/images/'
+    TEMPDIR => $conf->{temp_dir},
+    IMAGEDIR => $conf->{image_dir},
 };
+
 
 die 'you must specify moudle name' unless $OPT{m};
 die 'you must specify dicrib name' unless $OPT{d};
