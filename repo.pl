@@ -17,6 +17,7 @@ switch($action) {
     case '-p' {
 	my $repo_path = $conf->{repo_root}.'/'.$dist.'/dists/'.$cname.'/main/binary-'.$arch.'/';	
 	say 'path: '.$repo_path;
+	say '=== Warning! not file' unless -f $file;
 	copy($file,$repo_path);
 	update_repo($dist,$cname,$arch);
     }

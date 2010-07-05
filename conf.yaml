@@ -1,3 +1,4 @@
 repo_root: /opt/repo
 temp_dir:  /ram/builder/
 image_dir: /opt/images/
+modules_root: /ram/mirror/authors/id/
